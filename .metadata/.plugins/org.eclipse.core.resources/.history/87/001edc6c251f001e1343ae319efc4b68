@@ -1,0 +1,6 @@
+package com.aurionpro.model;
+import java.lang.Math;
+public class GuesserGame {
+	private double randomNumber = 100*Math.random();
+	
+}

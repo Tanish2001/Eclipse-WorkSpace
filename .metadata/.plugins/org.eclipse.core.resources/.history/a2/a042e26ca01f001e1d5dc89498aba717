@@ -1,0 +1,55 @@
+package com.aurionpro.model;
+import java.lang.Math;
+import java.util.Scanner;
+public class GuesserGame {
+	private double number = 100*Math.random();
+	private int randomNumber = (int)number;
+	private int userInput;
+	int count =5;
+	Scanner input = new Scanner(System.in);
+	int userinput = input.nextInt();
+	
+	public void setUserInput(int userInput) {
+		this.userInput = userInput;
+	}
+	
+	public int getUserInput() {
+		return userInput;
+	}
+	
+	public int getRandomNumber() {
+		return randomNumber;
+	}
+	
+	while(count>0) {
+		if(this.userInput<0 || this.userInput>100) {
+			System.out.println("Enter a valid number");
+			this.userinput = input.nextInt();
+//			game.setUserInput(userinput);
+		}
+		else if(this.userinput<this.randomNumber) {
+			System.out.println("The number is greater than your guess");
+			this.userinput = input.nextInt();
+//			game.setUserInput(userinput);
+			count--;
+		}
+		else if(game.getUserInput()>game.getRandomNumber()) {
+			System.out.println("The number is less than your guess");
+			this.userinput = input.nextInt();
+//			game.setUserInput(userinput);
+			count--;
+		}
+		else if(game.getUserInput()==game.getRandomNumber()) {
+			System.out.println("You guessed it correctly in "+(6-count)+" turn/s.");
+			guessed = true;
+			break;
+		}
+		
+	}
+	
+	if (guessed==false) {
+		System.out.println("You Lost");
+	}
+	
+	
+}

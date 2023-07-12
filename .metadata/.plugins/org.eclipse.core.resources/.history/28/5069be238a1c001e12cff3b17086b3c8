@@ -1,0 +1,20 @@
+package com.eclipse.test;
+public class CommandLine {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		double factorial=1;
+		int i = userinput;
+		
+		while(i>0) {
+			factorial = i*factorial;
+			i--;
+		}
+		
+		System.out.println(factorial);
+		
+		System.out.println(factorial);
+	}
+
+}

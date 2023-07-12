@@ -1,0 +1,16 @@
+package com.aurionpro.test;
+import java.util.Scanner;
+import com.aurionpro.model.GuesserGame;
+
+public class GameTest {
+
+	public static void main(String[] args) {
+		GuesserGame game = new GuesserGame();
+		System.out.println("Enter a number");
+		Scanner input = new Scanner(System.in);
+		int userinput = input.nextInt();
+		game.setUserInput(userinput);
+		System.out.println(game.getUserInput() +" "+ game.getRandomNumber());
+	}
+
+}
