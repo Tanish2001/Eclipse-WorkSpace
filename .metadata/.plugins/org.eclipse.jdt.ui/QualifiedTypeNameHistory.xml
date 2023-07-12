@@ -5,7 +5,11 @@
     <fullyQualifiedTypeName name="com.aurionpro.model.circle"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.BorderType"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.Color"/>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="org.w3c.dom.css.Rect"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.Rectangle"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.accountType"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Account"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.AccountType"/>
 </qualifiedTypeNameHistroy>
