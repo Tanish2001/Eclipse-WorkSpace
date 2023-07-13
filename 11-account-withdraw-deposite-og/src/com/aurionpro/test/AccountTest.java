@@ -16,7 +16,7 @@ public class AccountTest {
 		System.out.println(account);
 		deposite(2000, account);
 		System.out.println(account);
-		WithDraw(2000, account, AccountType.SAVINGS);
+		WithDraw(2100, account, AccountType.CURRENT);
 		System.out.println(account);
 		WithDraw(12000, account, AccountType.SAVINGS);
 		System.out.println(account);

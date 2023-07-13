@@ -11,5 +11,11 @@
     <fullyQualifiedTypeName name="com.aurionpro.model.accountType"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.Account"/>
+    <fullyQualifiedTypeName name="com.aurionpro.test.AccountTest"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.AccountType"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.City"/>
+    <fullyQualifiedTypeName name="javax.swing.plaf.FontUIResource"/>
+    <fullyQualifiedTypeName name="java.security.NoSuchAlgorithmException"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Time"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.SalesPerson"/>
 </qualifiedTypeNameHistroy>
