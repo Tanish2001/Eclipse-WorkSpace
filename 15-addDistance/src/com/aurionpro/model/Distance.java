@@ -22,6 +22,11 @@ public class Distance {
 	public void setInches(int inches) {
 		this.inches = inches;
 	}
+
+	@Override
+	public String toString() {
+		return "Distance [feet=" + feet + ", inches=" + inches + "]";
+	}
 	
 	
 }
