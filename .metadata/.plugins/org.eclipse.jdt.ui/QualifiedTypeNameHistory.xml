@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.Student"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.circle"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.BorderType"/>
@@ -18,4 +17,15 @@
     <fullyQualifiedTypeName name="java.security.NoSuchAlgorithmException"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.Time"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.SalesPerson"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.BookCricketGame"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Child"/>
+    <fullyQualifiedTypeName name="javax.net.ssl.ExtendedSSLSession"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Parent"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Distance"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Man"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Boy"/>
 </qualifiedTypeNameHistroy>
