@@ -117,7 +117,7 @@ public class BookCricketGameTest {
 	}
 	
 	public static int getRandomNumber() {
-	    return (int) ((Math.random() * (100 - 1)) + 1);
+	    return (int) ((Math.random() * (300 - 1)) + 1);
 	}
 	
 	
