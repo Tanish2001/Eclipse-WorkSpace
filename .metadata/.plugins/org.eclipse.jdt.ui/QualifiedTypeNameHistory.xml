@@ -25,10 +25,8 @@
     <fullyQualifiedTypeName name="com.aurionpro.model.Man"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.Boy"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.LetsPlayPig"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.security.DrbgParameters.NextBytes"/>
-    <fullyQualifiedTypeName name="com.aurionpro.model.DisplayCustomerModel"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.Account"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.SavingAccount"/>
@@ -39,4 +37,9 @@
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
     <fullyQualifiedTypeName name="com.aurionpro.test.Account"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.DisplayCustomerModel"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 </qualifiedTypeNameHistroy>
