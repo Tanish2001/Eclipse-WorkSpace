@@ -1,6 +1,4 @@
 package com.aurionpro.test;
-import java.util.Arrays;
-import java.util.Iterator;
 import java.util.Scanner;
 
 import com.aurionpro.model.DisplayCustomerModel;
@@ -25,29 +23,31 @@ public class DisplayCustomerTest {
 		};
 
 		Scanner userin = new Scanner(System.in);
-//		System.out.println("Enter id, name, email and password: ");
-//		new DisplayCustomerModel().setCustomerID(userin.nextInt());
-//		new DisplayCustomerModel().setEmail(userin.next());
-//		new DisplayCustomerModel().setName(userin.next());
-//		new DisplayCustomerModel().setPassword(userin.nextInt());
-		//validateEmail(customer);
-//		for (int i = 0; i < customer.length; i++) {
-//		System.out.println(customer[i]);
-//	}
+		System.out.println("Enter id, name, email and password: ");
+		DisplayCustomerModel customer1 = new DisplayCustomerModel();
+		customer1.setCustomerID(userin.nextInt());
+		customer1.setName(userin.next());
+		userin.nextLine();
+		customer1.setEmail(userin.nextLine());
+		customer1.setPassword(userin.nextInt());
+		validateEmailUserInput(customer1);
+		System.out.println("--------------------------------------");
+		validateEmail(customer);
+		for (int i = 0; i < customer.length; i++) {
+		System.out.println(customer[i]);
+	}
 		
 		sortArray(customer);
 		
 	}
 
 	private static void sortArray(DisplayCustomerModel[] customer) {
-		DisplayCustomerModel obj = customer[0];
 		DisplayCustomerModel temp = null;
 		 for (int i = 0; i < customer.length; i++) {
-			obj = customer[i];
 			for (int j = 0; j < customer.length; j++) {
 				
 			
-				if(obj.getName().compareToIgnoreCase(customer[j].getName())<0) {
+				if(customer[i].getName().compareToIgnoreCase(customer[j].getName())<0) {
 					temp = customer[i];
 					customer[i]=customer[j];
 					customer[j]=temp;
@@ -79,6 +79,24 @@ public class DisplayCustomerTest {
 				
 		}
 		return obj;
+		
+	}
+	
+	private static DisplayCustomerModel validateEmailUserInput(DisplayCustomerModel customer) {
+
+			int atTheRate = customer.getEmail().indexOf("@");
+			int com = customer.getEmail().indexOf(".com");
+			System.out.println(customer);
+			
+			if(atTheRate !=-1 && com!=-1) {
+				System.out.println("Valid Email ID");
+			}
+			else {
+				System.out.println("Invalid Email ID!");
+			}
+				
+		
+		return customer;
 		
 	}
 
