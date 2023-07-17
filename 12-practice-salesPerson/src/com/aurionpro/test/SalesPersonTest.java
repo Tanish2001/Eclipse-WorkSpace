@@ -19,7 +19,6 @@ public class SalesPersonTest {
 				new SalesPerson(6, "Collie", City.Nagpur, 2, 40)
 
 		};
-		
 		System.out.println("SalesPerson with highest sales is "+highestSalesPerson(salesperson));
 		System.out.println("Total amount gathered "+totalSales(salesperson));
 		System.out.println("Kalyan total sales "+totalSalesByCity(salesperson,City.Kalyan));
