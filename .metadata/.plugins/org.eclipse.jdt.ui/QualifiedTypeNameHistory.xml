@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.aurionpro.model.Student"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.circle"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.BorderType"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.Color"/>
@@ -36,10 +35,20 @@
     <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
-    <fullyQualifiedTypeName name="com.aurionpro.test.Account"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.DisplayCustomerModel"/>
     <fullyQualifiedTypeName name="java.io.File"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
     <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Accountant"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Manager"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Developer"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Employee"/>
+    <fullyQualifiedTypeName name="com.aurionpro.test.Account"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.SalariedEmployee"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.MainCLass"/>
+    <fullyQualifiedTypeName name="java.lang.Process"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Professor"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Student"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
 </qualifiedTypeNameHistroy>

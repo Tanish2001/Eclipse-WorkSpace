@@ -1,7 +1,0 @@
-package com.aurionpro.model;
-
-public class circle {
-	private double radius;
-	private Color color;
-	private BorderType border;
-}
