@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.aurionpro.model.circle"/>
-    <fullyQualifiedTypeName name="com.aurionpro.model.BorderType"/>
-    <fullyQualifiedTypeName name="com.aurionpro.model.Color"/>
-    <fullyQualifiedTypeName name="org.w3c.dom.css.Rect"/>
-    <fullyQualifiedTypeName name="com.aurionpro.model.Rectangle"/>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
-    <fullyQualifiedTypeName name="com.aurionpro.model.accountType"/>
-    <fullyQualifiedTypeName name="com.aurionpro.test.AccountTest"/>
-    <fullyQualifiedTypeName name="com.aurionpro.model.AccountType"/>
-    <fullyQualifiedTypeName name="com.aurionpro.model.City"/>
-    <fullyQualifiedTypeName name="javax.swing.plaf.FontUIResource"/>
-    <fullyQualifiedTypeName name="java.security.NoSuchAlgorithmException"/>
-    <fullyQualifiedTypeName name="com.aurionpro.model.Time"/>
-    <fullyQualifiedTypeName name="com.aurionpro.model.SalesPerson"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.BookCricketGame"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
@@ -21,7 +7,6 @@
     <fullyQualifiedTypeName name="javax.net.ssl.ExtendedSSLSession"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.Parent"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.Distance"/>
-    <fullyQualifiedTypeName name="com.aurionpro.model.Man"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.Boy"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.LetsPlayPig"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
@@ -39,7 +24,6 @@
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
     <fullyQualifiedTypeName name="java.io.BufferedReader"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.Accountant"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.Manager"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.Developer"/>
@@ -50,5 +34,30 @@
     <fullyQualifiedTypeName name="java.lang.Process"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.Professor"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.Student"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Dog"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Field"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Method"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Constructor"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Man"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Mannerable"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Emotionable"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Car"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Bike"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Bus"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.awt.Image"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.IMovable"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Vehicle"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Players"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.ClassifyPlayers"/>
+    <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="javax.management.RuntimeErrorException"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="com.aurionpro.exception.InvalidAgeException"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Bank"/>
+    <fullyQualifiedTypeName name="com.aurionpro.util.InsufficientBalanceException"/>
 </qualifiedTypeNameHistroy>
