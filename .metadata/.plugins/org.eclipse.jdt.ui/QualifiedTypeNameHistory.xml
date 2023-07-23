@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="com.aurionpro.model.BookCricketGame"/>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
-    <fullyQualifiedTypeName name="com.aurionpro.model.Child"/>
-    <fullyQualifiedTypeName name="javax.net.ssl.ExtendedSSLSession"/>
-    <fullyQualifiedTypeName name="com.aurionpro.model.Parent"/>
-    <fullyQualifiedTypeName name="com.aurionpro.model.Distance"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.Boy"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.LetsPlayPig"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.security.DrbgParameters.NextBytes"/>
-    <fullyQualifiedTypeName name="com.aurionpro.model.Account"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.SavingAccount"/>
     <fullyQualifiedTypeName name="java.awt.font.FontRenderContext"/>
@@ -55,9 +47,17 @@
     <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="javax.management.RuntimeErrorException"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="com.aurionpro.exception.InvalidAgeException"/>
-    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
     <fullyQualifiedTypeName name="com.aurionpro.model.Bank"/>
     <fullyQualifiedTypeName name="com.aurionpro.util.InsufficientBalanceException"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="java.lang.IncompatibleClassChangeError"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.util.Collection"/>
+    <fullyQualifiedTypeName name="java.lang.Comparable"/>
+    <fullyQualifiedTypeName name="com.aurionpro.model.Account"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
 </qualifiedTypeNameHistroy>

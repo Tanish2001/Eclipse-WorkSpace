@@ -1,6 +1,6 @@
 package com.aurionpro.util;
 
-public class InsufficientBalanceException extends RuntimeException {
+public class InsufficientBalanceException extends Exception {
 
 	private static final long serialVersionUID = 1L;
 	String message;

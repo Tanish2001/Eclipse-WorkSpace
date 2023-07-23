@@ -37,7 +37,7 @@ public class Bank {
 		return "Bank [accountNumber=" + accountNumber + ", name=" + name + ", balance=" + balance + "]";
 	}
 	
-	public static void withdraw(Bank bank,double amount) {
+	public static void withdraw(Bank bank,double amount) throws InsufficientBalanceException {
 		if(bank.getBalance()-amount>1000) {
 			bank.setBalance(bank.getBalance()-amount);
 			
