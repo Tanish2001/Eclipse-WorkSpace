@@ -24,6 +24,7 @@ public class GuesserGame {
 	}
 
 	public void guessuserinput(int userinput) {
+		System.out.println(getRandomNumber());
 		while (count > 0) {
 			if (userinput < 0 ||userinput > 100) {
 				System.out.println("Enter a valid number");
@@ -54,7 +55,22 @@ public class GuesserGame {
 			System.out.println("You Lost");
 		}
 //		return void;
-
+		askToContinue();
 	}
+	
+    public void askToContinue() {
+        System.out.println("Do you want to continue playing? (y/n)");
+        String choice = input.next().toLowerCase();
+        if (choice.equals("y")) {
+            this.randomNumber = (int) (100 * Math.random());
+            this.count = 5;
+            this.guessed = false;
+            System.out.println("Game Restarted");
+            guessuserinput(-1);
+        } 
+        else {
+            System.out.println("Game Ended");
+        }
+    }
 
 }
