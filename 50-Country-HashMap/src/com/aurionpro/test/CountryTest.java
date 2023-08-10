@@ -61,7 +61,7 @@ public class CountryTest {
 		case 1:
 			try {
 				Boolean foundFlag = false;
-				System.out.println("Enter country ID");
+				System.out.println("Enter country ID in string format");
 				String countryIDFromUser = userin.next();
 				if (countryIDFromUser.length() > 2) {
 					throw new NumberFormatException("ID length cannot be greater than 2");
@@ -84,7 +84,7 @@ public class CountryTest {
 
 		case 2:
 			try {
-				System.out.println("Enter country Name");
+				System.out.println("Enter country Name in string format");
 				userin.nextLine();
 				Boolean foundFlag = false;
 				String countryNameFromUser = userin.nextLine();
@@ -110,7 +110,11 @@ public class CountryTest {
 
 		case 3:
 			try {
-				System.out.println("Enter Region ID");
+				System.out.println("1. Europe\n"
+						+ "2. Americas\n"
+						+ "3. Asia\n"
+						+ "4. Middle East and Africa");
+				System.out.println("Enter Region ID from above to search in int format");
 				int regionIDFromUser = userin.nextInt();
 				if (regionIDFromUser > 4) {
 					throw new IllegalArgumentException("Invalid Region ID");
