@@ -7,7 +7,10 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
 
+import com.aurionpro.model.Accounts;
 import com.aurionpro.model.NamePrinter;
 
 public class NamesTest {
@@ -75,6 +78,53 @@ public class NamesTest {
 		Arrays.stream(names1)
 		.filter(name-> name.length()<5)
 		.forEach(System.out::println);
+		
+		List<Accounts> accountList = Arrays.asList(new Accounts(1, "Asis", 100),
+				new Accounts(2, "Bedang", 500),new Accounts(3, "Tanis", 50));
+		
+		System.out.println("-------------------------------------");
+		System.out.println("a. Show Account details of account with minimum Balance");
+		accountList.stream()
+		.sorted(Comparator.comparingDouble(Accounts::getSalary))
+		.limit(1)
+		.forEach(System.out::println);
+		
+		System.out.println("-------------------------------------");
+		System.out.println("b. Show Account details of account with maximum Balance");
+		accountList.stream()
+		.sorted(Comparator.comparingDouble(Accounts::getSalary).reversed())
+		.limit(1)
+		.forEach(System.out::println);
+		
+		System.out.println("-------------------------------------");
+		System.out.println("Show names greater than 6 characters");
+		
+		List<Accounts> collectNamesGreaterThan6 = accountList.stream()
+		.filter(acc -> acc.getName().length()>6)
+		.collect(Collectors.toList());
+		
+		if(collectNamesGreaterThan6.isEmpty()) {
+			System.out.println("Not found");
+		}
+		else {
+			System.out.println(collectNamesGreaterThan6);
+		}
+		
+		System.out.println("-------------------------------------");
+		System.out.println("find total of balance of all accounts");
+		double sumOfAllSalary = accountList.stream()
+		.mapToDouble(acc -> acc.getSalary()).sum();
+		System.out.println(sumOfAllSalary);
+		
+		List<Integer> numbers=Arrays.asList(10,20,30,40,50,25,35,45);
+		System.out.println("-------------------------------------");
+		Integer minimumNumber = numbers.stream()
+		.min(Integer::compareTo).get();
+		
+		Integer maximumNumber = numbers.stream()
+		.max(Integer::compareTo).get();
+		
+		System.out.println("Minimum number is "+minimumNumber+" max num is "+maximumNumber);
 	}
 	
 
