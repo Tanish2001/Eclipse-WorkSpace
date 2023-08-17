@@ -2,8 +2,10 @@ package com.aurionpro.test;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import com.aurionpro.model.Account;
 import com.aurionpro.model.Gender;
@@ -26,6 +28,31 @@ public class AccountTest {
 				.filter((account)-> account.getBankBalance()>100000 && account.getGender()==(Gender.Male))
 				.collect(Collectors.toList());
 		System.out.println(maleList);
+		
+		List<Double> bankBalance = accountList.stream()
+				.map((account)-> (account.getBankBalance()))
+				.collect(Collectors.toList());
+		System.out.println(bankBalance);
+		
+		List<String> accountNames = accountList.stream()
+		.map((account)->(account.getName()))
+		.collect(Collectors.toList());
+		System.out.println(accountNames);
+		
+		List<Account> sortedAcc = accountList.stream()
+		.sorted(Comparator.comparingDouble(Account::getBankBalance).reversed())
+		.limit(3)
+		.collect(Collectors.toList());
+//		System.out.println(sortedAcc);
+		sortedAcc.forEach((account)->System.out.println(account));
+		
+		List<Double> top3BankBalance = accountList.stream()
+		.sorted(Comparator.comparingDouble(Account::getBankBalance).reversed())
+		.limit(3)
+		.map((acc)->(acc.getBankBalance()))
+		.collect(Collectors.toList());
+		
+		System.out.println(top3BankBalance);
 	}
 
 }
