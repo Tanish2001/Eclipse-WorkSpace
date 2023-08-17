@@ -70,7 +70,7 @@ public class NamesTest {
 		Arrays.stream(names1)
 		.sorted(Comparator.reverseOrder())
 		.limit(3)
-		.forEach(System.out::println);
+		.forEachOrdered(System.out::println);
 		
 		
 		System.out.println("-------------------------------------");
