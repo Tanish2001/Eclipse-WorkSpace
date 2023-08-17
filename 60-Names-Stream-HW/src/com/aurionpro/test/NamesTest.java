@@ -58,12 +58,20 @@ public class NamesTest {
 		}
 		
 		System.out.println("-------------------------------------");
-		System.out.println(". print names of first 3 students sorted in ascending order");
+		System.out.println("a. print names of first 3 students sorted in ascending order");
 		 String[] names1= {"Jay","Nimesh","Mark","Mahesh","Ramesh"};
 		Arrays.stream(names1)
 		.sorted()
 		.limit(3)
+		.forEachOrdered(System.out::println);
+		
+		System.out.println("-------------------------------------");
+		System.out.println("c. print names of students sorted in descending order");
+		Arrays.stream(names1)
+		.sorted(Comparator.reverseOrder())
+		.limit(3)
 		.forEach(System.out::println);
+		
 		
 		System.out.println("-------------------------------------");
 		System.out.println("Names containing letter a");
