@@ -12,24 +12,46 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Set;
 
 public class EmployeeManagement {
 	List<Employee> empDetails  = new ArrayList<Employee>();
 	static final String filepath = "D:\\Codes\\Eclipse-Wrokspace\\61-Tests\\data.txt";
+	Set<Employee> empSet = new HashSet<Employee>();
 	
-	
-//	public void EmployeeManagement() {
-//		empDetails = new ArrayList<Employee>();
-//		loadEmpData();
-//	}
-	public void loadData() {
+	public EmployeeManagement() {
+//		System.out.println("Hello");
+		checkFile();
+//		empDetails.addAll(empSet);
 		loadEmpData();
 	}
 	
-	public void convertToEmpObj() {
+	private void checkFile() {
+		BufferedReader reader;
+		// TODO Auto-generated method stub
+		try {
+			
+			reader = new BufferedReader(new FileReader(filepath));
+			String line = reader.readLine();
+			if(line==null) {
+				serializeData();
+				System.out.println("done");
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("Failed");
+		}
+	}
+	public void loadData() {
+		loadEmpData();
+
+	}
+	
+	public void loadDtatFromFile() {
 		try {
 			BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\tanish.batham\\Downloads\\emp.txt"));
 			String line = br.readLine();
@@ -57,12 +79,16 @@ public class EmployeeManagement {
 					}
 					double salary = Double.parseDouble(arr[5].trim().replace("\"", ""));
 					int departmentID = Integer.parseInt(arr[7].trim().replace("\"", ""));
-					empDetails.add(new Employee(empID, name, role, managerID, date, salary, commission, departmentID));
-					System.out.println(empDetails);
+					empSet.add(new Employee(empID, name, role, managerID, date, salary, commission, departmentID));
+//					System.out.println(empSet);
 //					System.out.println(key   +value1 +value2);
 //					System.out.println("done");
 				}
 				line = br.readLine();
+				if(line==null) {
+					empDetails.addAll(empSet);
+					serializeData();
+				}
 			
 		} 
 		}catch (IOException e) {
@@ -80,12 +106,12 @@ public class EmployeeManagement {
 			out.close();
 			file.close();
 
-//	            System.out.println("Object has been serialized");
 			loadEmpData();
 
 		}
 
 		catch (IOException ex) {
+			ex.printStackTrace();
 			System.out.println("IOException is caught");
 		}
 	}
@@ -104,6 +130,7 @@ public class EmployeeManagement {
 		}
 
 		catch (IOException ex) {
+			ex.printStackTrace();
 			System.out.println("IOException is caught");
 		}
 
@@ -152,6 +179,7 @@ public class EmployeeManagement {
 	}
 	
 	public void addNewEmp() {
+		loadEmpData();
 		System.out.println("Enter Emp ID");
 		Scanner userin = new Scanner(System.in);
 		int empID = userin.nextInt();
@@ -172,9 +200,18 @@ public class EmployeeManagement {
 		double commission = userin.nextDouble();
 		System.out.println("Enter department id");
 		int department = userin.nextInt();
-		
-		empDetails.add(new Employee(empID, name, role, managerID, date, salary, commission, department));
-		serializeData();
+		boolean sameEmpIDFound = false;
+		for (Employee employee : empDetails) {
+			if (employee.getEmployeeID()==empID) {
+				System.out.println("Emp with same id already exsist");
+				sameEmpIDFound = true;
+				
+			}
+		}
+		if(!sameEmpIDFound) {
+			empDetails.add(new Employee(empID, name, role, managerID, date, salary, commission, department));
+			serializeData();
+		}
 		
 	}
 	
@@ -293,7 +330,7 @@ public class EmployeeManagement {
 		for (Employee employee : empDetails) {
 //			String temp = employee.getDateOfJoining();
 			String[] split = employee.getDateOfJoining().split("-");
-			split;
+//			split;
 //			temp.addAll((split));
 //			System.out.println(split);
 			

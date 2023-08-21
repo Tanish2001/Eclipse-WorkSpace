@@ -2,6 +2,7 @@ package com.aurionpro.model;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Objects;
 
 public class Employee implements Serializable {
 private static final long serialVersionUID = 1L;
@@ -78,6 +79,21 @@ public String toString() {
 	return "Employee [employeeID=" + employeeID + ", name=" + name + ", role=" + role + ", managerID=" + managerID
 			+ ", dateOfJoining=" + dateOfJoining + ", salary=" + salary + ", commission=" + commission
 			+ ", departmentID=" + departmentID + "]\n";
+}
+@Override
+public int hashCode() {
+	return Objects.hash(employeeID);
+}
+@Override
+public boolean equals(Object obj) {
+	if (this == obj)
+		return true;
+	if (obj == null)
+		return false;
+	if (getClass() != obj.getClass())
+		return false;
+	Employee other = (Employee) obj;
+	return employeeID == other.employeeID;
 }
 
 
