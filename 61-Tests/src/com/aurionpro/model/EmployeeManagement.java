@@ -8,13 +8,19 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -22,6 +28,7 @@ public class EmployeeManagement {
 	List<Employee> empDetails  = new ArrayList<Employee>();
 	static final String filepath = "D:\\Codes\\Eclipse-Wrokspace\\61-Tests\\data.txt";
 	Set<Employee> empSet = new HashSet<Employee>();
+    SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yy");
 	
 	public EmployeeManagement() {
 //		System.out.println("Hello");
@@ -81,7 +88,6 @@ public class EmployeeManagement {
 					int departmentID = Integer.parseInt(arr[7].trim().replace("\"", ""));
 					empSet.add(new Employee(empID, name, role, managerID, date, salary, commission, departmentID));
 //					System.out.println(empSet);
-//					System.out.println(key   +value1 +value2);
 //					System.out.println("done");
 				}
 				line = br.readLine();
@@ -112,7 +118,7 @@ public class EmployeeManagement {
 
 		catch (IOException ex) {
 			ex.printStackTrace();
-			System.out.println("IOException is caught");
+//			System.out.println("IOException is caught");
 		}
 	}
 
@@ -141,7 +147,7 @@ public class EmployeeManagement {
 	
 	public void getAllEmp() {
 		
-		loadEmpData();
+//		loadEmpData();
 		for (Employee employee : empDetails) {
 			System.out.println(employee);
 		}
@@ -241,6 +247,9 @@ public class EmployeeManagement {
 				temp = employee;
 			}
 		}
+		if(temp.getManagerID()==0) {
+			System.out.println("No manager exsists for President");
+		}
 		for (Employee employee : empDetails) {
 			if(employee.getEmployeeID()==temp.getManagerID()) {
 				System.out.println(employee);
@@ -323,20 +332,59 @@ public class EmployeeManagement {
 		System.out.println("Total salary of company is "+sal);
 	}
 	
-	public void newJoineesInDate() {
-		loadEmpData();
-//		List<Arrays> temp = new ArrayList<Arrays>();
-		int i=0;
-		for (Employee employee : empDetails) {
-//			String temp = employee.getDateOfJoining();
-			String[] split = employee.getDateOfJoining().split("-");
-//			split;
-//			temp.addAll((split));
-//			System.out.println(split);
-			
 
+	public void newJoineesInDate() throws ParseException {
+		Date parsedStartDate = null;
+		Date parsedEndDate = null;
+		System.out.println("Enter start date in DD/MM/YY format");
+		Scanner userin = new Scanner(System.in);
+		String startDate = userin.nextLine();
+		System.out.println("Enter end date in DD/MM/YY format");
+		String endDate = userin.nextLine();
+		try {
+			parsedStartDate = dateFormat.parse(startDate);
+			parsedEndDate = dateFormat.parse(endDate);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		
+		Map<String, Integer> months= new HashMap<String, Integer>();
+		months.put("JAN",1);
+		months.put("FEB",2);
+		months.put("MAR",3);
+		months.put("APR",4);
+		months.put("MAY",5);
+		months.put("JUN",6);
+		months.put("JUL",7);
+		months.put("AUG",8);
+		months.put("SEP",9);
+		months.put("OCT",10);
+		months.put("NOV",11);
+		months.put("DEC",12);
+		int day = 0;
+		int month=0;
+		int year=0;
+		for (Employee employee : empDetails) {
+			String date = employee.getDateOfJoining();
+			String[] parts = date.split("-");
+//			System.out.println(parts.length);
+			day = Integer.parseInt(parts[0].substring(1));
+			month = months.get(parts[1]);
+			year = Integer.parseInt(parts[2].substring(0,2));
+			String temp = day+"/"+month+"/"+year;
+			Date parsedTemp = dateFormat.parse(temp);
+//			try {
+//				System.out.println(dateFormat.parse(temp));
+//			} catch (ParseException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+			if(parsedTemp.after(parsedStartDate) && parsedTemp.before(parsedEndDate)){
+				System.out.println(employee);
+			}
+		}
 
-	}
+    }
+	
+
 }
